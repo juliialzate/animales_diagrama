@@ -1,0 +1,69 @@
+@startuml
+
+class Tienda
+Tienda : Vender()
+
+Class Productos
+Productos : Alimento: String
+Productos : Accesorios: String 
+
+
+
+Tienda o-- Animal
+Tienda o-- Productos
+
+
+Class Persona
+Persona : - Nombre : String
+Persona : - Celular : int
+
+
+Persona <|-- Propietario 
+
+class Animal
+
+Animal : - nombre: String
+Animal : - raza: String 
+
+
+
+class Mascota 
+
+class Propietario
+Propietario : Info_Dueño()
+Mascota --* Propietario
+Mascota : + pasear()
+Mascota : + alimentar()
+Mascota : + dar_info()
+
+
+Animal <|-- Mascota
+
+
+Mascota <|-- Perro
+Mascota <|-- Gato
+Mascota <|-- Loro
+Mascota <|-- Elefante
+
+Perro : Alimentar()
+Perro : Pasear()
+
+Gato : Alimentar()
+Gato : Pasear()
+
+Loro : Alimentar()
+Loro : Pasear()
+
+Elefante : Alimentar()
+Elefante : Pasear()
+
+
+
+
+
+
+
+
+
+
+@enduml
